@@ -1,4 +1,8 @@
 \select@language {german}
 \select@language {german}
-\contentsline {section}{\numberline {1}Git}{3}
+\contentsline {section}{\numberline {1}Vim}{3}
 \contentsline {subsection}{\numberline {1.1}Befehls\IeC {\"u}bersicht}{3}
+\contentsline {subsubsection}{\numberline {1.1.1}Modes}{3}
+\contentsline {subsubsection}{\numberline {1.1.2}Commands}{3}
+\contentsline {section}{\numberline {2}Git}{4}
+\contentsline {subsection}{\numberline {2.1}Befehls\IeC {\"u}bersicht}{4}
