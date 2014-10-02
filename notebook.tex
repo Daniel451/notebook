@@ -1,0 +1,78 @@
+\documentclass[10pt,a4paper]{article}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Meta-Informationen
+%
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Packages
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{longtable}
+\usepackage[german]{babel}
+\selectlanguage{german}
+\usepackage[babel]{csquotes}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\DeclareGraphicsExtensions{.pdf,.svg,.jpg,.png,.eps}
+\graphicspath{{./pics/}}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{polynom} % Polynomdivision
+\usepackage{floatflt}
+\usepackage{float}
+\usepackage[table]{xcolor}
+\usepackage{colortbl}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Tabellenfarben
+\colorlet{tablesubheadcolor}{gray!25}
+\colorlet{tableheadcolor}{gray!40}
+\colorlet{tablerowcolor}{gray!15.0}
+\colorlet{tablerowcolor_cyan}{cyan!15}
+\colorlet{tablerowcolor_orange}{orange!20}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Farben setzen
+\definecolor{seagreen}{rgb}{0.18, 0.55, 0.34}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\title{\textbf{\huge Notebook
+\\\large Verschiedene Repetitorien}}
+\author{Daniel Speck}
+
+%% Maße A4: 210mm x 297mm
+%%%% linke Seite: \hoffset (default 1 inch = 25.4mm) + \oddsidemargin
+\setlength{\topmargin}{-1.0cm}
+\setlength{\textheight}{650pt}
+\setlength{\textwidth}{160mm} % Textbreite (Body)
+\setlength{\oddsidemargin}{0mm} % Abstand linke Seite
+
+
+
+\begin{document}
+
+
+	% Titel, Autor & Abgabedatum
+	\maketitle
+
+	\newpage
+
+	\tableofcontents
+
+	\newpage
+
+	\input{git}
+
+
+
+\end{document}

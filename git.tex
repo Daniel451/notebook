@@ -1,0 +1,214 @@
+\section{Git}
+
+	\subsection{Befehlsübersicht}
+
+		\renewcommand{\arraystretch}{1.5}
+		\begin{longtable}{|p{7cm}|p{8cm}|}
+		  
+		  	\hline
+
+		  	\rowcolor{tableheadcolor}
+		  	\textbf{Befehl} & \textbf{Auswirkung}
+
+		  	\\ \hline
+
+		  	%%%%%%%%%%%%%%%%%%%%%%%
+		  	% git add
+		  	%%%%%%%%%%%%%%%%%%%%%%%
+		  	\rowcolor{tablerowcolor_cyan}
+		  	git add & Fügt eine Datei der Stage hinzu
+		  	\\ \hline
+		  	\rowcolor{tablerowcolor_cyan}
+		  	git add *.txt & Fügt alle txt-Dateien der Stage hinzu
+		  	\\ \hline
+		  	\rowcolor{tablerowcolor_cyan}
+		  	git add . & Fügt alle Dateien (die unstaged sind) der Stage hinzu
+		  	\\ \hline
+
+		  	%%%%%%%%%%%%%%%%%%%%%%%
+		  	% git branch
+		  	%%%%%%%%%%%%%%%%%%%%%%%
+		  	\rowcolor{tablerowcolor_orange}
+		  	git branch & Listet alle vornandenen branches auf
+		  	\\ \hline
+		  	\rowcolor{tablerowcolor_orange}
+		  	git branch -a & Listet alle remote und local branches auf
+		  	\\ \hline
+		  	\rowcolor{tablerowcolor_orange}
+		  	git branch -r & Listet alle remote branches auf
+		  	\\ \hline
+		  	\rowcolor{tablerowcolor_orange}
+		  	git branch feature & Erzeugt den neuen branch feature
+		  	\\ \hline
+		  	\rowcolor{tablerowcolor_orange}
+		  	git branch -d feature & Löscht den branch feature
+		  	\\ \hline
+		  	\rowcolor{tablerowcolor_orange}
+		  	git branch -u origin/feature & Weist den aktuellen branch an, den remote branch origin/feature zu tracken
+		  	\\ \hline
+
+
+		  	%%%%%%%%%%%%%%%%%%%%%%%
+		  	% git clone
+		  	%%%%%%%%%%%%%%%%%%%%%%%
+		  	\rowcolor{tablerowcolor_cyan}
+		  	git clone git@github.com:user/repository.git & Klont das remote repository in das aktuelle Verzeichnis
+		  	\\ \hline
+		  	\rowcolor{tablerowcolor_cyan}
+		  	git clone git@github.com:user/repository.git zielverzeichnis & Klont das remote repository in das Zielverzeichnis
+		  	\\ \hline
+
+
+		  	%%%%%%%%%%%%%%%%%%%%%%%
+		  	% git commit
+		  	%%%%%%%%%%%%%%%%%%%%%%%
+		  	\rowcolor{tablerowcolor_orange}
+		  	git commit & Erzeugt einen neuen commit mit allen Dateien, die aktuell gestaged sind
+		  	\\ \hline
+		  	\rowcolor{tablerowcolor_orange}
+		  	git commit --amend & Korrigiert das letzte commit (Korrigierung der commit-message plus hinzufügen der aktuell gestageten Dateien)
+		  	\\ \hline
+
+
+		  	%%%%%%%%%%%%%%%%%%%%%%%
+		  	% git checkout
+		  	%%%%%%%%%%%%%%%%%%%%%%%
+		  	\rowcolor{tablerowcolor_cyan}
+		  	git checkout master & Wechselt auf den branch master
+		  	\\ \hline
+		  	\rowcolor{tablerowcolor_cyan}
+		  	git checkout origin/experimental & Wechselt in den origin branch origin/experimental (nur zum anschauen, nicht zum editieren, dann vorher immer erst eine local copy vom origin branch erstellen)
+		  	\\ \hline
+		  	\rowcolor{tablerowcolor_cyan}
+		  	git checkout -- file.txt & Setzt file.txt auf den Stand des letzten commits (aktueller branch) zurück
+		  	\\ \hline
+		  	\rowcolor{tablerowcolor_cyan}
+		  	git checkout -b local\_test origin/remote\_test & Erstellt den neuen branch local\_test im local repository und linked auf remote\_test für zukünftige fetches\/pulls
+		  	\\ \hline
+
+
+		  	%%%%%%%%%%%%%%%%%%%%%%%
+		  	% git diff
+		  	%%%%%%%%%%%%%%%%%%%%%%%
+		  	\rowcolor{tablerowcolor_orange}
+		  	git diff & Zeigt alle Änderungen seit dem letzten commit, die noch nicht gestaged sind
+		  	\\ \hline
+		  	\rowcolor{tablerowcolor_orange}
+		  	git diff --staged & Zeigt alle Änderungen seit dem letzten commit, die gestaged sind
+		  	\\ \hline
+
+
+		  	%%%%%%%%%%%%%%%%%%%%%%%
+		  	% git fetch
+		  	%%%%%%%%%%%%%%%%%%%%%%%
+		  	\rowcolor{tablerowcolor_cyan}
+		  	git fetch origin & Lädt alle Änderungen (branches, commits) von dem remote repository origin herunter
+		  	\\ \hline
+
+
+		  	%%%%%%%%%%%%%%%%%%%%%%%
+		  	% git init
+		  	%%%%%%%%%%%%%%%%%%%%%%%
+		  	\rowcolor{tablerowcolor_orange}
+		  	git init & Initialisiert ein neues/leeres repository im aktuellen Verzeichnis
+		  	\\ \hline
+
+
+		  	%%%%%%%%%%%%%%%%%%%%%%%
+		  	% git log
+		  	%%%%%%%%%%%%%%%%%%%%%%%
+		  	\rowcolor{tablerowcolor_cyan}
+		  	git log & Zeigt alle commits an
+		  	\\ \hline
+		  	\rowcolor{tablerowcolor_cyan}
+		  	git log -n 5 & Zeigt nur die letzten 5 commits an
+		  	\\ \hline
+		  	\rowcolor{tablerowcolor_cyan}
+		  	git log --abbrev-commit & Kürzt die SHA1-Hashes auf 7 Zeichen (oder mehr, wenn 7 Zeichen nicht ausreichen, damit die Hashes unique sind)
+		  	\\ \hline
+		  	\rowcolor{tablerowcolor_cyan}
+		  	git log -p & Zeigt zusätzlich zu den commits alle geänderten Zeilen an
+		  	\\ \hline
+		  	\rowcolor{tablerowcolor_cyan}
+		  	git log -p --word-diff & Zeigt anstatt der geänderten Zeilen nur die geänderten Wörter an
+		  	\\ \hline
+		  	\rowcolor{tablerowcolor_cyan}
+		  	git log --stat & Zeigt zu jedem commit eine kleine Statistik an
+		  	\\ \hline
+
+
+		  	%%%%%%%%%%%%%%%%%%%%%%%
+		  	% git merge
+		  	%%%%%%%%%%%%%%%%%%%%%%%
+		  	\rowcolor{tablerowcolor_orange}
+		  	git merge feature & Merged den aktuellen branch mit dem branch feature
+		  	\\ \hline
+
+
+		  	%%%%%%%%%%%%%%%%%%%%%%%
+		  	% git mv
+		  	%%%%%%%%%%%%%%%%%%%%%%%
+		  	\rowcolor{tablerowcolor_cyan}
+		  	git mv fileFrom fileTo & Zeigt Datei umbenennen oder verschieden
+		  	\\ \hline
+
+
+		  	%%%%%%%%%%%%%%%%%%%%%%%
+		  	% git push
+		  	%%%%%%%%%%%%%%%%%%%%%%%
+		  	\rowcolor{tablerowcolor_orange}
+		  	git push origin master & Lädt das local repository master hoch in das remote repository origin
+		  	\\ \hline
+
+
+		  	%%%%%%%%%%%%%%%%%%%%%%%
+		  	% git remote
+		  	%%%%%%%%%%%%%%%%%%%%%%%
+		  	\rowcolor{tablerowcolor_cyan}
+		  	git remote & Zeigt das remote repository an
+		  	\\ \hline
+		  	\rowcolor{tablerowcolor_cyan}
+		  	git remote -v & Zeigt zusätzlich die remote-url an
+		  	\\ \hline
+		  	\rowcolor{tablerowcolor_cyan}
+		  	git remote add [shortname] [url] & Fügt ein neues remote repository hinzu
+		  	\\ \hline
+		  	\rowcolor{tablerowcolor_cyan}
+		  	git remote show origin & Zeigt push/pull-Infos zu dem remote und local repository an
+		  	\\ \hline
+		  	\rowcolor{tablerowcolor_cyan}
+		  	git remote rename oldName newName & Benennt das remote repository oldName um in newName
+		  	\\ \hline
+		  	\rowcolor{tablerowcolor_cyan}
+		  	git remote rm repositoryName & Entfert das remote repository mit der Bezeichnung repositoryName
+		  	\\ \hline
+
+
+		  	%%%%%%%%%%%%%%%%%%%%%%%
+		  	% git reset
+		  	%%%%%%%%%%%%%%%%%%%%%%%
+		  	\rowcolor{tablerowcolor_orange}
+		  	git reset HEAD file.txt & Unstaged file.txt
+		  	\\ \hline
+
+
+		  	%%%%%%%%%%%%%%%%%%%%%%%
+		  	% git rm
+		  	%%%%%%%%%%%%%%%%%%%%%%%
+		  	\rowcolor{tablerowcolor_cyan}
+		  	git rm file.txt & Merkt auf der stage die Löschung von file.txt für das nächste commit vor und löscht file.txt aus dem Verzeichnis
+		  	\\ \hline
+		  	\rowcolor{tablerowcolor_cyan}
+		  	git rm --cached file.txt & Löscht die Datei nicht aus dem Arbeitsverzeichnis, aber aus der Versionskontrolle
+		  	\\ \hline
+
+
+			%%%%%%%%%%%%%%%%%%%%%%%
+		  	% git stats
+		  	%%%%%%%%%%%%%%%%%%%%%%%
+		  	\rowcolor{tablerowcolor_orange}
+		  	git status & Zeigt den aktuellen branch, untracked files, die stage, usw. an
+		  	\\ \hline		  	
+
+
+		\end{longtable}
